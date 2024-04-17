@@ -9,7 +9,7 @@ class GameController:
     def __init__(self, initial_inputs=None, names=None, target=None) -> None:
         names = names or self.__get_names()
         self.state = GameState(names, target)
-        self.view = color_view.ColorView()
+        self.view = TextualView()
         self.initial_inputs = initial_inputs
 
     def __get_input(self):
