@@ -1,6 +1,6 @@
 from game_state import GameState
-from view import GameView
-
+from view import GameView, TextualView
+import color_view
 
 class GameController:
     state: GameState
@@ -9,13 +9,13 @@ class GameController:
     def __init__(self, initial_inputs=None, names=None, target=None) -> None:
         names = names or self.__get_names()
         self.state = GameState(names, target)
-        self.view = GameView()
+        self.view = color_view.ColorView()
         self.initial_inputs = initial_inputs
 
     def __get_input(self):
         if self.initial_inputs:
             return str(self.initial_inputs.pop())
-        return input(f"enter your move... ").strip()
+        return input(f"Enter your move... ").strip()
 
     def __get_names(self):
         return input("Enter the names of the players, separated by spaces: ").strip().split(" ")

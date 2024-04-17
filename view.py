@@ -1,6 +1,16 @@
 from game_state import GameState
 
+
 class GameView:
+
+    def display(self, state: GameState):
+        pass
+
+    def display_game_over(self, state: GameState):
+        pass
+
+
+class TextualView(GameView):
 
     def display(self, state: GameState):
         print()
