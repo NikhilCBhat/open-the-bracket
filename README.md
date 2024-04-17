@@ -11,5 +11,5 @@ Players can only use each operation and digit once.
 
 ## Execution Instructions
 ```sh
-python3 numbers_game.py
+python3 open_the_bracket.py
 ```
